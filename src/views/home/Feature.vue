@@ -14,7 +14,7 @@
       class="justify-center py-10"
     >
       <v-col
-        v-for="item in items"
+        v-for="(item, index) in items"
         :key="item.title"
         cols="6"
         md="3"
@@ -23,11 +23,19 @@
         <v-hover v-slot="{ hover }">
           <v-card
             outlined
+            hover
+            :ripple="false"
             :height="$vuetify.breakpoint.mdAndUp ? 260 : 200"
-            :elevation="hover ? 5 : 0"
+            :elevation="hover || selectedItem == index ? 5 : 0"
             :class="{ 'on-hover': hover }"
             width="214"
             class="pa-5"
+            :style="
+              hover || selectedItem == index
+                ? 'border-bottom: solid 5px #68b76b'
+                : ''
+            "
+            @click="selectedItem = index"
           >
             <v-card-text class="pa-0">
               <v-img
@@ -72,6 +80,7 @@ export default {
   name: "Feature_Home",
   data() {
     return {
+      selectedItem: null,
       items: [
         {
           title: "Jelajah Voucher",

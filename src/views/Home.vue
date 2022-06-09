@@ -17,6 +17,14 @@
     <benefit-section />
 
     <feature-section />
+
+    <demo-video-section />
+
+    <testimonials-section />
+
+    <instagram-section />
+
+    <subscribe-section />
   </v-row>
 </template>
 
@@ -24,10 +32,22 @@
 import Section1 from "./home/Section1.vue";
 import BenefitSection from "./home/Benefit.vue";
 import FeatureSection from "./home/Feature.vue";
+import DemoVideoSection from "./home/DemoVideo.vue";
+import TestimonialsSection from "./home/Testimonials.vue";
+import InstagramSection from "./home/Instagram.vue";
+import SubscribeSection from "./home/Subscribe.vue";
 
 export default {
   name: "Home",
-  components: { Section1, BenefitSection, FeatureSection },
+  components: {
+    Section1,
+    BenefitSection,
+    FeatureSection,
+    DemoVideoSection,
+    TestimonialsSection,
+    InstagramSection,
+    SubscribeSection,
+  },
 };
 </script>
 
