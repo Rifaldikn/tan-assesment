@@ -89,7 +89,7 @@
       </v-row>
     </v-container>
     <!-- </v-row> -->
-    <v-dialog v-model="loginDialog" max-width="770px" width="70%">
+    <v-dialog v-model="loginDialog" max-width="770px">
       <LoginDialog />
     </v-dialog>
   </v-app-bar>
