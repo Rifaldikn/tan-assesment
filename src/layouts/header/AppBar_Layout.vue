@@ -36,8 +36,9 @@
             :ripple="false"
             :small="$vuetify.breakpoint.smAndDown"
             elevation="0"
-            color="black"
+            :color="loginDialog ? 'success' : 'black'"
             active-class="success"
+            @click="loginDialog = true"
             >sign in</v-btn
           >
           <v-divider vertical inset></v-divider>
@@ -48,6 +49,7 @@
             :ripple="false"
             elevation="0"
             color="black"
+            @click="route.push({ name: 'SignUp' })"
           >
             sign up
           </v-btn>
@@ -87,16 +89,23 @@
       </v-row>
     </v-container>
     <!-- </v-row> -->
+    <v-dialog v-model="loginDialog" max-width="770px" width="70%">
+      <LoginDialog />
+    </v-dialog>
   </v-app-bar>
 </template>
 
 
 <script>
+import LoginDialog from "./Login_Dialog.vue";
+
 export default {
   name: "Appbar_Layout",
+  components: { LoginDialog },
   data() {
     return {
       tanIcon: require("@/assets/tan_icon.png"),
+      loginDialog: true,
       navigation: [
         {
           label: "Home",

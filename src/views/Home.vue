@@ -24,6 +24,7 @@
 
     <instagram-section />
 
+
     <subscribe-section />
   </v-row>
 </template>
