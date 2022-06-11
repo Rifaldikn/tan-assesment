@@ -3,7 +3,7 @@
     <v-row class="align-center justify-center mb-5">
       <!-- Timeline -->
 
-      <v-col cols="12" v-if="$route.name == 'SignUp_Mentor'">
+      <v-col cols="12" v-if="$route.name == 'SignUp_Mentor'" class="mt-10">
         <v-row no-gutters>
           <v-col
             :cols="12 / timeLine.length"

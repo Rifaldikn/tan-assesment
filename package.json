@@ -11,10 +11,13 @@
     "@mdi/js": "^6.7.96",
     "core-js": "^3.6.5",
     "hooper": "^0.3.4",
+    "text-mask-addons": "^3.8.0",
+    "v-mask": "^2.3.0",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
     "vuetify": "^2.6.0",
-    "vuex": "^3.4.0"
+    "vuex": "^3.4.0",
+    "vuex-persistedstate": "^4.1.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.15",
