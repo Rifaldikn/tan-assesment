@@ -1,11 +1,10 @@
 <template>
   <v-app-bar
     dense
-    elevate-on-scroll
     hide-on-scroll
     class="pa-0"
     height="auto"
-    elevation="5"
+    elevation="3"
     color="white"
     max-height="180px"
   >
@@ -193,7 +192,7 @@ export default {
         },
         {
           label: "E-Store",
-          link: "/e-store",
+          link: "/store",
         },
         {
           label: "Jadwal Bimbel Offline",
