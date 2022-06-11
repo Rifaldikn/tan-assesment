@@ -24,7 +24,6 @@
 
     <instagram-section />
 
-
     <subscribe-section />
   </v-row>
 </template>
@@ -52,15 +51,4 @@ export default {
 };
 </script>
 
-<style>
-.globe-mainpage {
-  background-image: url("../assets/globe_homepage.png");
-  background-size: cover;
-}
 
-.tanCard-1 {
-  background-image: url("../assets/group_tan_studies.png");
-  background-size: cover;
-  background-position: center;
-}
-</style>

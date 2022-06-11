@@ -9,7 +9,7 @@
             block
             dark
             tile
-            style="border: 1px grey solid"
+            style="border: 1px grey solid; border-top: none"
             :ripple="false"
             elevation="0"
             height="50"
@@ -29,7 +29,7 @@
             block
             dark
             tile
-            style="border: 1px grey solid"
+            style="border: 1px grey solid; border-top: none"
             :ripple="false"
             elevation="0"
             height="50"
@@ -88,6 +88,7 @@
                 dense
                 hide-details=""
                 placeholder="Password"
+                type="password"
                 class="grey--text font-italic mt-5"
               ></v-text-field>
               <v-btn
@@ -129,21 +130,27 @@
 
               <v-btn
                 block
+                link
                 height="50"
                 elevation="0"
                 class="white--text"
                 color="#2D9CDB"
+                :to="{ name: 'SignUp_Student' }"
+                @click="$emit('closeDialog')"
               >
                 <span>Daftar Siswa</span>
               </v-btn>
               <v-btn
                 block
+                link
                 height="50"
                 elevation="0"
                 class="white--text mt-5"
                 color="#2579A9"
+                :to="{ name: 'SignUp_Mentor' }"
+                @click="$emit('closeDialog')"
               >
-                <span>Daftar Siswa</span>
+                <span>Daftar Pengajar</span>
               </v-btn>
             </v-col>
           </v-card>
@@ -159,6 +166,10 @@ export default {
   data() {
     return {
       tab: 0,
+      forms: {
+        username: "",
+        password: "",
+      },
     };
   },
 };
