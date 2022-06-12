@@ -109,6 +109,7 @@
                   height="50"
                   elevation="0"
                   width="150"
+                  @click="$router.go(-1)"
                   >Kembali</v-btn
                 >
               </v-col>
